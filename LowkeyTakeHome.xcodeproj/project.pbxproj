@@ -12,6 +12,14 @@
 		DDDD26562BCBF5990024122B /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD26552BCBF5990024122B /* PhotosViewController.swift */; };
 		DDDD265B2BCBF59A0024122B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDD265A2BCBF59A0024122B /* Assets.xcassets */; };
 		DDDD265E2BCBF59A0024122B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDDD265D2BCBF59A0024122B /* Base */; };
+		DDDD26662BCBF8F10024122B /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD26652BCBF8F10024122B /* PhotosViewModel.swift */; };
+		DDDD266B2BCBFA300024122B /* PexelsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD266A2BCBFA300024122B /* PexelsApiClient.swift */; };
+		DDDD266D2BCBFA7A0024122B /* PexelsCuratedPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD266C2BCBFA7A0024122B /* PexelsCuratedPhotosResponse.swift */; };
+		DDDD26702BCBFEDB0024122B /* PexelsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD266F2BCBFEDB0024122B /* PexelsPhoto.swift */; };
+		DDDD26722BCC013E0024122B /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD26712BCC013E0024122B /* PhotoCell.swift */; };
+		DDDD26752BCC04910024122B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD26742BCC04910024122B /* ImageService.swift */; };
+		DDDD26792BCC1FE30024122B /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD26782BCC1FE30024122B /* PhotoDetailsViewController.swift */; };
+		DDDD267B2BCC20750024122B /* PhotoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD267A2BCC20750024122B /* PhotoDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		DDDD265A2BCBF59A0024122B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDDD265D2BCBF59A0024122B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDDD265F2BCBF59A0024122B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDDD26652BCBF8F10024122B /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		DDDD266A2BCBFA300024122B /* PexelsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsApiClient.swift; sourceTree = "<group>"; };
+		DDDD266C2BCBFA7A0024122B /* PexelsCuratedPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsCuratedPhotosResponse.swift; sourceTree = "<group>"; };
+		DDDD266F2BCBFEDB0024122B /* PexelsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsPhoto.swift; sourceTree = "<group>"; };
+		DDDD26712BCC013E0024122B /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		DDDD26742BCC04910024122B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		DDDD26782BCC1FE30024122B /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		DDDD267A2BCC20750024122B /* PhotoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,78 @@
 		DDDD26502BCBF5990024122B /* LowkeyTakeHome */ = {
 			isa = PBXGroup;
 			children = (
-				DDDD26512BCBF5990024122B /* AppDelegate.swift */,
-				DDDD26532BCBF5990024122B /* SceneDelegate.swift */,
-				DDDD26552BCBF5990024122B /* PhotosViewController.swift */,
+				DDDD26692BCBFA0C0024122B /* App */,
+				DDDD26672BCBF9F30024122B /* Network */,
+				DDDD26732BCC04870024122B /* Services */,
+				DDDD26682BCBF9FB0024122B /* UI */,
 				DDDD265A2BCBF59A0024122B /* Assets.xcassets */,
 				DDDD265C2BCBF59A0024122B /* LaunchScreen.storyboard */,
 				DDDD265F2BCBF59A0024122B /* Info.plist */,
 			);
 			path = LowkeyTakeHome;
+			sourceTree = "<group>";
+		};
+		DDDD26672BCBF9F30024122B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD266E2BCBFECE0024122B /* Models */,
+				DDDD266A2BCBFA300024122B /* PexelsApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DDDD26682BCBF9FB0024122B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD26772BCC1FD30024122B /* PhotoDetails */,
+				DDDD26762BCC1FCB0024122B /* Photos */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DDDD26692BCBFA0C0024122B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD26512BCBF5990024122B /* AppDelegate.swift */,
+				DDDD26532BCBF5990024122B /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DDDD266E2BCBFECE0024122B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD266C2BCBFA7A0024122B /* PexelsCuratedPhotosResponse.swift */,
+				DDDD266F2BCBFEDB0024122B /* PexelsPhoto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDDD26732BCC04870024122B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD26742BCC04910024122B /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DDDD26762BCC1FCB0024122B /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD26552BCBF5990024122B /* PhotosViewController.swift */,
+				DDDD26652BCBF8F10024122B /* PhotosViewModel.swift */,
+				DDDD26712BCC013E0024122B /* PhotoCell.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		DDDD26772BCC1FD30024122B /* PhotoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD26782BCC1FE30024122B /* PhotoDetailsViewController.swift */,
+				DDDD267A2BCC20750024122B /* PhotoDetailsViewModel.swift */,
+			);
+			path = PhotoDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +215,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDD26562BCBF5990024122B /* PhotosViewController.swift in Sources */,
+				DDDD26662BCBF8F10024122B /* PhotosViewModel.swift in Sources */,
+				DDDD26752BCC04910024122B /* ImageService.swift in Sources */,
+				DDDD267B2BCC20750024122B /* PhotoDetailsViewModel.swift in Sources */,
 				DDDD26522BCBF5990024122B /* AppDelegate.swift in Sources */,
+				DDDD266B2BCBFA300024122B /* PexelsApiClient.swift in Sources */,
+				DDDD26722BCC013E0024122B /* PhotoCell.swift in Sources */,
+				DDDD26792BCC1FE30024122B /* PhotoDetailsViewController.swift in Sources */,
+				DDDD26702BCBFEDB0024122B /* PexelsPhoto.swift in Sources */,
 				DDDD26542BCBF5990024122B /* SceneDelegate.swift in Sources */,
+				DDDD266D2BCBFA7A0024122B /* PexelsCuratedPhotosResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
